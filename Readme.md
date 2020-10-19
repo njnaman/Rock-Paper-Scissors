@@ -17,9 +17,12 @@ $ git clone https://github.com/njnaman/Rock-Paper-Scissors.git
 $ cd "Rock Paper Scissor"
 ```
 
-2. Install the dependencies
+2. Install the following dependencies
 ```sh
-$ pip install -r requirements.txt
+- DenseNet121
+- Keras
+- Tensorflow
+- OpenCV
 ```
 
 3. Gather Images for each gesture (rock, paper and scissors and None):
