@@ -1,6 +1,6 @@
 # Rock Paper Scissor 
 
-A rock paper scissor game using machine learning
+A rock paper scissor game using machine learning.
 
 
 ## Requirements
@@ -23,7 +23,7 @@ $ pip install -r requirements.txt
 ```
 
 3. Gather Images for each gesture (rock, paper and scissors and None):
-In this example, we gather 50 images for the "rock" gesture
+In this example, we gather 50 images for the "Rock" gesture
 ```sh
 $ python3 gather_data.py Rock 50
 ```
@@ -39,7 +39,9 @@ $ python3 data_augment.py path
 $ python3 train_densenet.py
 ```
 
-6. Play the game with your computer!
+6. Play the game with your Friends!
 ```sh
 $ python3 play.py
 ```
+
+# ENJOY THE GAME
