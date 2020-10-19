@@ -11,12 +11,14 @@ CLASS_MAP = {
     3: "none"
 }
 
+# Getting the Screen Size
 user32 = ctypes.windll.user32
 screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
 
 def mapper(val):
     return CLASS_MAP[val]
 
+# Deciding the winner of the game from the user moves
 def checkWinner(user1_move , user2_move):
     if(user1_move==user2_move):
         return "TIE"
@@ -41,7 +43,7 @@ def checkWinner(user1_move , user2_move):
         if(user2_move=="rock"):
             return "User2"
 
-
+# Loading the model
 model = load_model("RPS_MODEL1.h5")
 
 cap = cv2.VideoCapture(0)
@@ -77,10 +79,10 @@ while True:
     user2_move_name = mapper(move_code)
 
 
-    #deciding the winner
+    # Deciding the winner
     winner = checkWinner(user1_move_name , user2_move_name)
     
-     # display the information
+     # Display the information
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(frame, "User1 Move: " + user1_move_name, (50, 50), font, 1.2, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(frame, "User2 Move: " + user2_move_name, (750, 50), font, 1.2, (255, 255, 255), 2, cv2.LINE_AA)
